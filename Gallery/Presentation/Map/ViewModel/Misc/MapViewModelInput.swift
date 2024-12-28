@@ -6,5 +6,8 @@
 //
 
 import Foundation
+import Combine
 
-struct MapViewModelInput {}
+struct MapViewModelInput {
+    var itemSelected: AnyPublisher<ImageAsset, Never>
+}

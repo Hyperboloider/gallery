@@ -16,7 +16,10 @@ final class ImagesWithLocationsUseCase {
             .fetchStreamWithPredicate(NSPredicate(format: "\(#keyPath(ImageEntity.locationLongitude)) != nil"))
     }
     
-    func execute() -> AnyPublisher<[ImageAsset], Never> {
-        readableStream.publisher
+    func execute() -> AnyPublisher<[MapAssetAnnotation], Never> {
+        readableStream
+            .publisher
+            .map { $0.compactMap(MapAssetAnnotation.init) }
+            .eraseToAnyPublisher()
     }
 }

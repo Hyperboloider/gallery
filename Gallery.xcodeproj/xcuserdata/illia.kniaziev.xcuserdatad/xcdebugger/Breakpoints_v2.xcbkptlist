@@ -82,36 +82,6 @@
             endingLineNumber = "59"
             landmarkName = "loadImage(by:targetSize:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7768D181-D53E-4FAA-8051-613864F73314 - 40a9f6c72f80a46c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in Gallery.AsyncImageLoader.loadImage(by: Swift.String, targetSize: __C.CGSize) -&gt; ()"
-                  moduleName = "Gallery.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/illia.kniaziev/Desktop/Gallery/Gallery/Presentation/Gallery/View/Misc/AsyncImageView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60">
-               </Location>
-               <Location
-                  uuid = "7768D181-D53E-4FAA-8051-613864F73314 - 2ecf61eaca31f15d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;__C.UIImage&gt;, Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in Gallery.AsyncImageLoader.loadImage(by: Swift.String, targetSize: __C.CGSize) -&gt; ()"
-                  moduleName = "Gallery.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/illia.kniaziev/Desktop/Gallery/Gallery/Presentation/Gallery/View/Misc/AsyncImageView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

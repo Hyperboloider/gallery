@@ -12,5 +12,5 @@ import UIKit
 protocol PhotosRepository {
     func requestAuthorization() async -> PHAuthorizationStatus
     func fetchAllImageAssets() async throws -> [ImageAsset]
-    func requestImage(for asset: ImageAsset, targetSize: CGSize) async throws -> UIImage
+    func requestImage(for assetId: String, targetSize: CGSize) async throws -> UIImage
 }

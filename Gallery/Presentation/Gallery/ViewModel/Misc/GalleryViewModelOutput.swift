@@ -10,5 +10,5 @@ import Combine
 struct GalleryViewModelOutput {
     var isPhotosAccessAuthorized: AnyPublisher<Bool, Never>
     var processingProgress: AnyPublisher<Double, Never>
-    var snapshotPublisher: AnyPublisher<[CategorizedImageSet], Never>
+    var snapshotPublisher: AnyPublisher<[CategorizedGridItems], Never>
 }

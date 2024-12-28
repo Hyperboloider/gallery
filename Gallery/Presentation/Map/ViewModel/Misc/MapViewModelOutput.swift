@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 struct MapViewModelOutput {
-    var snapshotPublisher: AnyPublisher<[ImageAsset], Never>
+    var snapshotPublisher: AnyPublisher<[MapAssetAnnotation], Never>
 }

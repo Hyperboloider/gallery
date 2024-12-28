@@ -46,7 +46,7 @@ final class ProcessUnprocessedAssetsUseCase {
         
         for (index, asset) in unprocessedAssets.enumerated() {
             guard let image = try? await photoLibraryService.requestImage(
-                for: asset,
+                for: asset.id,
                 targetSize: Constants.targetSize
             ) else {
                 print("Could not load image for asset with ID: \(asset.id)")

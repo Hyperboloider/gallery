@@ -9,4 +9,5 @@ import Photos
 
 struct GalleryViewModelActions {
     var requestPhotosAccess: () async -> PHAuthorizationStatus
+    var itemSelected: ((ImageAsset) -> Void)
 }

@@ -45,9 +45,9 @@ final class PhotosRepositoryImplementation: PhotosRepository {
             }
     }
     
-    func requestImage(for asset: ImageAsset, targetSize: CGSize) async throws -> UIImage {
+    func requestImage(for asset: String, targetSize: CGSize) async throws -> UIImage {
         return try await withCheckedThrowingContinuation { continuation in
-            let fetchResult = PHAsset.fetchAssets(withLocalIdentifiers: [asset.id], options: nil)
+            let fetchResult = PHAsset.fetchAssets(withLocalIdentifiers: [asset], options: nil)
             guard let phAsset = fetchResult.firstObject else {
                 continuation.resume(throwing: PhotosError.assetNotFound)
                 return

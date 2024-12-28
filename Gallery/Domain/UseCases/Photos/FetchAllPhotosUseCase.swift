@@ -11,7 +11,7 @@ protocol FetchAllPhotosUseCase {
     func execute() async throws -> [ImageAsset]
 }
 
-final class FetchAllPhotosUseCaseImplementation {
+final class FetchAllPhotosUseCaseImplementation: FetchAllPhotosUseCase {
     let photosRepository: PhotosRepository
     
     init(photosRepository: PhotosRepository) {

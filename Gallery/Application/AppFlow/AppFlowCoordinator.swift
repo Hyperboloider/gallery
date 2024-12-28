@@ -18,7 +18,7 @@ final class AppFlowCoordinator: Coordinator {
  
     func start() {
         let context = appContext.makeTabbarContext()
-        let coordinator = context.makeTabbarCoordinator(forNC: navigationController)
+        let coordinator = context.makeCoordinator(navigationController: navigationController)
         coordinator.start()
     }
 }

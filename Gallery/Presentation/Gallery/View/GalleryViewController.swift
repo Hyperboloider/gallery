@@ -13,7 +13,8 @@ import SwiftUI
 
 final class GalleryViewController: UIViewController {
     private let viewModel: GalleryViewModel
-    private let gridModel = CategorizedGridModel()
+    private lazy var gridModel = CategorizedGridModel(onSelect: { [unowned self] in selectionSubject.send($0) })
+    private let selectionSubject = PassthroughSubject<ImageAsset, Never>()
     private let groupingPreferenceSubject = CurrentValueSubject<ReactiveImagesDataSourceUseCase.GroupingPreference, Never>(.category)
     private var bag = Set<AnyCancellable>()
     
@@ -48,6 +49,7 @@ final class GalleryViewController: UIViewController {
     private func bindToViewModel() async {
         let output = await viewModel.transform(
             input: GalleryViewModelInput(
+                itemSelectedPublisher: selectionSubject.eraseToAnyPublisher(),
                 groupingPreferencePublisher: groupingPreferenceSubject.eraseToAnyPublisher()
             )
         )
