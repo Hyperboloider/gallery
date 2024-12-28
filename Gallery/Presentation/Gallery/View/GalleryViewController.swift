@@ -55,7 +55,11 @@ final class GalleryViewController: UIViewController {
             .processingProgress
             .receive(on: DispatchQueue.main)
             .sink { [unowned self] progress in
-                title = String(format: "Progress: %.2f", progress * 100) + "%"
+                if progress == 1 {
+                    title = "AI"
+                } else {
+                    title = String(format: "AI: %.2f", progress * 100) + "%"
+                }
             }
             .store(in: &bag)
         
@@ -102,17 +106,14 @@ final class GalleryViewController: UIViewController {
             self.configureNavigationBar()
         })
         
-        // Create the UIMenu
         let menu = UIMenu(title: "Select Grouping Preference", children: [monthAction, categoryAction])
         
-        // Create a UIBarButtonItem with an image and menu
         let menuBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "line.horizontal.3"),
             primaryAction: nil,
             menu: menu
         )
         
-        // Add the UIBarButtonItem to the navigation bar
         self.navigationItem.rightBarButtonItem = menuBarButtonItem
     }
     

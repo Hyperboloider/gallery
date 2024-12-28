@@ -49,14 +49,17 @@ class AsyncImageLoader: ObservableObject {
             return
         }
         
-        PHImageManager.default().requestImage(
-            for: asset,
-            targetSize: targetSize,
-            contentMode: .aspectFill,
-            options: nil
-        ) { [weak self] image, _ in
-            DispatchQueue.main.async {
-                self?.image = image
+        DispatchQueue.global(qos: .userInteractive).async {
+            PHImageManager.default().requestImage(
+                for: asset,
+                targetSize: targetSize,
+                contentMode: .aspectFill,
+                options: nil
+            ) { [weak self] image, _ in
+                let a = 1
+                DispatchQueue.main.async {
+                    self?.image = image
+                }
             }
         }
     }

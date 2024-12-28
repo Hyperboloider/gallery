@@ -17,8 +17,8 @@ final class AppFlowCoordinator: Coordinator {
     }
  
     func start() {
-        let galleryContext = GallerySceneContext(dependencies: .init())
-        let coordinator = galleryContext.makeGalleryCoordinator(navigationController: navigationController)
+        let context = appContext.makeTabbarContext()
+        let coordinator = context.makeTabbarCoordinator(forNC: navigationController)
         coordinator.start()
     }
 }
