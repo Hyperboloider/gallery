@@ -7,7 +7,9 @@
 
 import Foundation
 
-final class SaveImageAssetUseCase {
+
+
+final class SaveImageAssetUseCaseImplementation: SaveImageAssetUseCase {
     private let coreDataRepository: CoreDataRepository
     
     init(coreDataRepository: CoreDataRepository) {

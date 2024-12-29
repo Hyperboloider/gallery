@@ -7,7 +7,9 @@
 
 import UIKit
 
-final class ClassifyImageUseCase {
+
+
+final class ClassifyImageUseCaseImplementation: ClassifyImageUseCase {
     private let imageClassificationService: ImageClassificationService
     
     init(imageClassificationService: ImageClassificationService) {

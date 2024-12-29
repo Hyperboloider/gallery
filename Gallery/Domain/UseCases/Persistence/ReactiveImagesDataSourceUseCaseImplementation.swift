@@ -8,12 +8,9 @@
 import Foundation
 import Combine
 
-final class ReactiveImagesDataSourceUseCase {
-    enum GroupingPreference {
-        case month
-        case category
-    }
-    
+
+
+final class ReactiveImagesDataSourceUseCaseImplementation: ReactiveImagesDataSourceUseCase {
     let readableStream: any ReadableStreamDataSource<ImageAsset>
     
     init(coreDataRepository: CoreDataRepository) {

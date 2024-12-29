@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 
-final class FetchImageAsynchronouslyUseCase {
+
+
+final class FetchImageAsynchronouslyUseCaseImplementation: FetchImageAsynchronouslyUseCase {
     let photosRepository: PhotosRepository
     
     init(photosRepository: PhotosRepository) {

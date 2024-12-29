@@ -8,7 +8,9 @@
 import Foundation
 import Combine
 
-final class ImagesWithLocationsUseCase {
+
+
+final class ImagesWithLocationsUseCaseImplementation: ImagesWithLocationsUseCase {
     let readableStream: any ReadableStreamDataSource<ImageAsset>
     
     init(coreDataRepository: CoreDataRepository) {

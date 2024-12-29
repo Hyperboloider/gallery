@@ -7,9 +7,7 @@
 
 import Foundation
 
-protocol FetchAllPhotosUseCase {
-    func execute() async throws -> [ImageAsset]
-}
+
 
 final class FetchAllPhotosUseCaseImplementation: FetchAllPhotosUseCase {
     let photosRepository: PhotosRepository
