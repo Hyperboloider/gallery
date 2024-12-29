@@ -1,6 +1,11 @@
-This project implemented with Clean Layered Architecture and MVVM+C
+Цей проект реалізовано за допомогою чистої багаторівневої архітектури та MVVM+C
 
-This project is an iOS application dedicated to enhancing user gallery categorization using Artificial Intelligence. It offers a seamless experience for users to explore their image gallery and map views, along with a detailed screen for deeper insights into specific items. The architecture is designed to ensure scalability, maintainability, and testability.
+Цей проект є додатком для iOS, призначеним для покращення категоризації галереї користувачів за допомогою моделі ШІ. Він пропонує досвід для користувачів, щоб досліджувати свою галерею зображень і карти, а також детальний екран для більш глибокого розуміння конкретних елементів. Архітектура розроблена для забезпечення масштабованості, зручності обслуговування та тестування.
+
+Для запуску додатку необхідно відкрити .xcodeproj файл та збілдити за допомогою Xcode 16.0 чи новіше.
+
+## Demo:
+https://youtu.be/WmxUvaM_hOI
 
 ## Application Features
 1. **Gallery Screen**: Displays a curated collection of user images.
