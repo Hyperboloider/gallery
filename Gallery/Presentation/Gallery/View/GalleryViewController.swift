@@ -15,7 +15,7 @@ final class GalleryViewController: UIViewController {
     private let viewModel: GalleryViewModel
     private lazy var gridModel = CategorizedGridModel(onSelect: { [unowned self] in selectionSubject.send($0) })
     private let selectionSubject = PassthroughSubject<ImageAsset, Never>()
-    private let groupingPreferenceSubject = CurrentValueSubject<ReactiveImagesDataSourceUseCase.GroupingPreference, Never>(.category)
+    private let groupingPreferenceSubject = CurrentValueSubject<GroupingPreference, Never>(.category)
     private var bag = Set<AnyCancellable>()
     
     private let allowAccessLabel: UILabel = {

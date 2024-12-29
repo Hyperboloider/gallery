@@ -38,11 +38,14 @@ final class GallerySceneContext: Context {
         imageClassificationService: dependencies.imageClassificationService
     )
     
-    lazy var imagesDataSourceUseCase = ReactiveImagesDataSourceUseCase(
-        coreDataRepository: dependencies.coreDateRepository
-    )
+    lazy var imagesDataSourceUseCase: ReactiveImagesDataSourceUseCase =
+        ReactiveImagesDataSourceUseCaseImplementation(
+            coreDataRepository: dependencies.coreDateRepository
+        )
     
-    private lazy var imageUseCase = FetchImageAsynchronouslyUseCase(photosRepository: dependencies.photosRepository)
+    private lazy var imageUseCase: FetchImageAsynchronouslyUseCase = FetchImageAsynchronouslyUseCaseImplementation(
+        photosRepository: dependencies.photosRepository
+    )
     
     // MARK: - Navigation
     
@@ -125,9 +128,10 @@ final class MapSceneContext: Context, MapCoordinatorDependencies {
     
     private let dependancies: Dependancies
     
-    private lazy var locationAssetsDataSource = ImagesWithLocationsUseCase(
-        coreDataRepository: dependancies.coreDateRepository
-    )
+    private lazy var locationAssetsDataSource: ImagesWithLocationsUseCase =
+        ImagesWithLocationsUseCaseImplementation(
+            coreDataRepository: dependancies.coreDateRepository
+        )
     
     init(dependencies: Dependancies) {
         self.dependancies = dependencies
@@ -264,7 +268,9 @@ final class DetailsSceneContext: Context, DetailsCoordinatorDependencies {
     private let dependencies: Dependencies
     
     
-    private lazy var imageUseCase = FetchImageAsynchronouslyUseCase(photosRepository: dependencies.photosRepository)
+    private lazy var imageUseCase: FetchImageAsynchronouslyUseCase = FetchImageAsynchronouslyUseCaseImplementation(
+        photosRepository: dependencies.photosRepository
+    )
     
     init(asset: ImageAsset, dependencies: Dependencies) {
         self.asset = asset

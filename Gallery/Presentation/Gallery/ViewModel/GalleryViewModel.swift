@@ -37,7 +37,7 @@ final class GalleryViewModel {
             .store(in: &bag)
         
         let authorizationStatus = await actions.requestPhotosAccess()
-        photosAccessAllowedSubject.send(authorizationStatus == .authorized)
+        photosAccessAllowedSubject.send(authorizationStatus != .notDetermined && authorizationStatus != .denied)
         
         Task {
             try? await processingUseCase.execute {

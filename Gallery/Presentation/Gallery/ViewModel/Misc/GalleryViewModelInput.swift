@@ -9,5 +9,5 @@ import Combine
 
 struct GalleryViewModelInput {
     var itemSelectedPublisher: AnyPublisher<ImageAsset, Never>
-    var groupingPreferencePublisher: AnyPublisher<ReactiveImagesDataSourceUseCase.GroupingPreference, Never>
+    var groupingPreferencePublisher: AnyPublisher<GroupingPreference, Never>
 }
